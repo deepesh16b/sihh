@@ -21,19 +21,19 @@ def predictt():
         #     raise ValueError("Invalid input data format.")
         print('features .......................', features)
         priority_prediction = priority.predict(features)[0]
-        priority_names = {
-            1: 'Lowest',
-            2: 'Low (2)',
-            3: 'Low (1)',
-            4: 'Medium (3)',
-            5: 'Medium (2)',
-            6: 'Medium (1)',
-            7: 'High (3)',
-            8: 'High (2)',
-            9: 'High (1)',
-            10: 'Critical'
-        }# Make a prediction
-        print('prediction .......................', priority_names[priority_prediction])
+        # priority_names = {
+        #     1: 'Lowest',
+        #     2: 'Low (2)',
+        #     3: 'Low (1)',
+        #     4: 'Medium (3)',
+        #     5: 'Medium (2)',
+        #     6: 'Medium (1)',
+        #     7: 'High (3)',
+        #     8: 'High (2)',
+        #     9: 'High (1)',
+        #     10: 'Critical'
+        # }# Make a prediction
+        print('prediction .......................', priority_prediction)
         judge_position_data = {
             0: '3-jmfc',
             1: 'addil. district and sesseions court palghar',
@@ -70,7 +70,7 @@ def predictt():
         print('prediction .......................', judge_position_data[judge_position_prediction])
         time_prediction=round(time.predict(features)[0])
         print('prediction .......................', time_prediction)
-        response_data = {'priority_prediction': priority_names[priority_prediction],"judge_position_prediction":judge_position_data[judge_position_prediction],"time_prediction":str(time_prediction)}
+        response_data = {'priority_prediction': str(priority_prediction),"judge_position_prediction":judge_position_data[judge_position_prediction],"time_prediction":str(time_prediction)}
         response_json = json.dumps(response_data)  # Convert the dictionary to a JSON string
 
         # Return JSON response with the appropriate Content-Type header

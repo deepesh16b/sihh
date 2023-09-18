@@ -60,6 +60,7 @@ app.post("/submit", async (req, res) => {
   const input_case_data = await predict_priority(inputArray);
   res.send("input case: ",inputArray, "prediction: ", input_case_data);
   console.log(input_case_data);
+  await createCase("C2", act_s, type_name_s,date_of_filling,description, female_defendant, female_petitioner, female_adv_def, female_adv_pet);
 });
 
 // ----------------------------------------------------------------------
