@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="ecourt.ico" type="image/x-icon" />
+    <title>E-Court</title>
+  </head>
+  <body>
+    <div class="formbold-main-wrapper">
+      <div class="formbold-form-wrapper">
+        <div style="padding: 10px; text-align: center">
+          <h1>E-Court</h1>
+          <img style="width: 100px; padding: 10px" src="ecourt.jpg" />
+        </div>
+        <!-- --------------------------------------- -->
+        <form action="/submit" method="post">
+
+          <div class="formbold-input-group">
+            <label class="formbold-form-label">Gender of Petitioner</label>
+            <select class="formbold-form-select" name="female_petitioner" id="femalePetitioner">
+              <option value="" disabled selected style="display: none"></option>
+              <option value="0">Female</option>
+              <option value="1">Male</option>
+              <option value="2">Missing Name</option>
+              <option value="3">Unclear</option>
+            </select>
+          </div>
+        
+          <div class="formbold-input-group">
+            <label class="formbold-form-label">Gender of Defendant</label>
+            <select class="formbold-form-select" name="female_defendant" id="femaleDefendant">
+              <option value="" disabled selected style="display: none"></option>
+              <option value="0">Female</option>
+              <option value="1">Male</option>
+              <option value="2">Missing Name</option>
+              <option value="3">Unclear</option>
+            </select>
+          </div>
+        
+          <div class="formbold-input-group">
+            <label class="formbold-form-label">Gender of Petitioner's Advocate</label>
+            <select class="formbold-form-select" name="female_adv_pet" id="femaleAdvPetitioner">
+              <option value="" disabled selected style="display: none"></option>
+              <option value="0">Female</option>
+              <option value="1">Male</option>
+              <option value="2">Missing Name</option>
+              <option value="3">Unclear</option>
+            </select>
+          </div>
+        
+          <div class="formbold-input-group">
+            <label class="formbold-form-label">Gender of Defendant's Advocate</label>
+            <select class="formbold-form-select" name="female_adv_def" id="femaleAdvDefendant">
+              <option value="" disabled selected style="display: none"></option>
+              <option value="0">Female</option>
+              <option value="1">Male</option>
+              <option value="2">Missing Name</option>
+              <option value="3">Unclear</option>
+            </select>
+          </div>
+        
+          <div class="formbold-input-group">
+            <label for="dob" class="formbold-form-label">Date of Filing</label>
+            <input type="date" name="date_of_filling" id="date_of_filling" class="formbold-form-input" placeholder=" " />
+          </div>
+        
+          <div class="formbold-input-group">
+            <label class="formbold-form-label">Case Type</label>
+            <select class="formbold-form-select" name="type_name_s" id="caseType">
+              <option value="" disabled selected style="display: none"></option>
+              <option value="8">juvenile</option>
+              <option value="13">marriage petn.</option>
+              <option value="20">police case</option>
+              <option value="15">misc case</option>
+              <option value="37">summons cases ss</option>
+              <option value="33">spl.case child prot.</option>
+              <option value="31">sessions case</option>
+              <option value="7">darkhast</option>
+              <option value="18">notice cases</option>
+              <option value="1">civil m.a.</option>
+              <option value="0">arbitration r.d</option>
+            </select>
+          </div>
+        
+          <div class="formbold-input-group">
+            <label class="formbold-form-label">Act</label>
+            <select class="formbold-form-select" name="act_s" id="act">
+              <option value="" disabled selected style="display: none"></option>
+              <option value="0">138 n. i. act.</option>
+              <option value="1">Animal preservation act ( maharashtra )</option>
+              <option value="2">Birth and death registration act 1969</option>
+              <option value="3">Child labour act</option>
+              <option value="4">Code of criminal procedure</option>
+              <option value="5">Dowry prohibition act</option>
+              <option value="6">Factories act</option>
+              <option value="7">Return of property</option>
+              <option value="8">Terrorist and disruptive and activities (prevention) act</option>
+              <option value="9">Woman protection of domestic violence act,2005</option>
+            </select>
+          </div>
+        
+          <div>
+            <label for="Description" class="formbold-form-label">Description</label>
+            <textarea rows="6" name="Description" id="Description" class="formbold-form-input"></textarea>
+          </div>
+        
+          <button class="formbold-btn" type="submit">Submit</button>
+        </form>
+        
+      </div>
+    </div>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #ffffff;
+      }
+      .formbold-main-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 48px 48px;
+      }
+
+      .formbold-form-wrapper {
+        margin: 0 auto;
+        max-width: 570px;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        padding: 0 40px 40px;
+      }
+
+      .formbold-form-img {
+        margin-bottom: 45px;
+      }
+
+      .formbold-input-group {
+        margin-bottom: 18px;
+      }
+
+      .formbold-form-select {
+        width: 100%;
+        padding: 12px 22px;
+        border-radius: 5px;
+        border: 1px solid #dde3ec;
+        background: #ffffff;
+        font-size: 16px;
+        color: #536387;
+        outline: none;
+        resize: none;
+      }
+      .formbold-input-radio-wrapper {
+        margin-bottom: 25px;
+      }
+      .formbold-radio-flex {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      .formbold-radio-label {
+        font-size: 14px;
+        line-height: 24px;
+        color: #07074d;
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+      .formbold-input-radio {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+      }
+      .formbold-radio-checkmark {
+        position: absolute;
+        top: -1px;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #ffffff;
+        border: 1px solid #dde3ec;
+        border-radius: 50%;
+      }
+      .formbold-radio-label
+        .formbold-input-radio:checked
+        ~ .formbold-radio-checkmark {
+        background-color: #6a64f1;
+      }
+      .formbold-radio-checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      .formbold-radio-label
+        .formbold-input-radio:checked
+        ~ .formbold-radio-checkmark:after {
+        display: block;
+      }
+
+      .formbold-radio-label .formbold-radio-checkmark:after {
+        top: 50%;
+        left: 50%;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #ffffff;
+        transform: translate(-50%, -50%);
+      }
+      /* #Select::placeholder {
+        display: none;
+      } */
+      .formbold-form-input {
+        width: 100%;
+        padding: 13px 22px;
+        border-radius: 5px;
+        border: 1px solid #dde3ec;
+        background: #ffffff;
+        font-weight: 500;
+        font-size: 16px;
+        color: #07074d;
+        outline: none;
+        resize: none;
+      }
+      .formbold-form-input::placeholder {
+        color: #536387;
+      }
+      .formbold-form-input:focus {
+        border-color: #6a64f1;
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+      }
+      .formbold-form-label {
+        color: #07074d;
+        font-size: 14px;
+        line-height: 24px;
+        display: block;
+        margin-bottom: 10px;
+      }
+
+      .formbold-btn {
+        text-align: center;
+        width: 100%;
+        font-size: 16px;
+        border-radius: 5px;
+        padding: 14px 25px;
+        border: none;
+        font-weight: 500;
+        background-color: #6a64f1;
+        color: white;
+        cursor: pointer;
+        margin-top: 25px;
+      }
+      .formbold-btn:hover {
+        box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+      }
+    </style>
+  </body>
+</html>

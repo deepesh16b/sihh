@@ -1,0 +1,64 @@
+{
+  "judge_position": {
+    "3-jmfc": 0,
+    "addil. district and sesseions court palghar": 1,
+    "railway ner": 27,
+    "senior division court shrirampur": 28,
+    "shevgaon court shevgaon ahmednagar": 29
+  },
+  "type_name_s": {
+    "arbitration r.d": 0,
+    "civil m.a.": 1,
+    "ss case ss": 34,
+    "ss cases  s": 35,
+    "succession": 36,
+    "summons cases ss": 37
+  },
+  "disp_name_s": {
+    "258 crpc": 0,
+    "abated": 1,
+    
+    "referred to lok adalat": 26,
+    "reject": 27,
+    "remanded": 28,
+    "settled": 29,
+    "transferred": 30,
+    "withdrawn": 31
+  },
+  "purpose_name_s": {
+    "a. d. r.": 0,
+    "additional w.s.": 1,
+    "admission and denial": 2,
+    "amended plaint": 3,
+
+    "verification": 105,
+    "w.s. and say": 106,
+    "written statement": 107
+  },
+  "act_s": {
+    "138 n. i. act.": 0,
+    "Animal preservation act ( maharashtra )": 1,
+    "Birth and death registration act 1969": 2,
+    "Child labour act": 3,
+    "Code of criminal procedure": 4,
+    "Dowry prohibition act": 5,
+    "Factories act": 6,
+    "Return of property": 7,
+    "Terrorist and disruptive and activities (prevention) act": 8,
+    "Woman protection of domestic violence  act,2005": 9
+  },
+  "female_defendant": {
+    "Female": 0,
+    "Male": 1,
+    "Missing Name": 2,
+    "Unclear": 3
+  },
+  "female_petitioner": {
+    "Female": 0,
+    "Male": 1,
+    "Missing Name": 2,
+    "Unclear": 3
+  },
+  "female_adv_def": { "Female": 0, "Male": 1, "Missing Name": 2, "Unclear": 3 },
+  "female_adv_pet": { "Female": 0, "Male": 1, "Missing Name": 2, "Unclear": 3 }
+}
