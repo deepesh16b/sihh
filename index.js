@@ -33,7 +33,7 @@ app.use("/api/judge", judgeRouter);
 
 // --------------------------------------------------------------------
 
-const predict_priority = async (inputArray) => {
+export const predict_priority = async (inputArray) => {
     const apiUrl = "http://127.0.0.1:5000/predictt";
     try {
         const response = await axios.post(apiUrl, { features: inputArray });

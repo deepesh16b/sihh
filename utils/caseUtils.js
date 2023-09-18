@@ -1,23 +1,25 @@
 import caseSchema from "../mongodb/models/case.js";
+import { predict_priority } from "../index.js";
 
 //temporary function to get priority from ML model
 function getPriorityFromMLModel(caseType, caseDescription) {
     return Math.random() * 10;
 }
 
-export async function createCase(caseID, caseName, caseType, hearingDates, caseStatus, caseDescription, caseDocuments) {
+export async function createCase(caseID, acts, type_name_s, caseDescription, female_defendant, female_petitioner, female_adv_def, female_adv_pet) {
     // replace this with ML model
-    const priority = getPriorityFromMLModel(caseType, caseDescription);
+    const priority = await predict_priority([caseType, acts, female_defendant, female_petitioner,  female_adv_def, female_adv_pet]);
     const newCase = await caseSchema.create({
         caseID: caseID,
         type_name_s: type_name_s,
-        judge_position: judge_position,
+        judge_position: priority[1],
         caseDescription: caseDescription,
         female_defendant: female_defendant,
         female_petitioner: female_petitioner,
         female_adv_def: female_adv_def,
         female_adv_pet: female_adv_pet,
-        case_duration: case_duration,
+        case_duration: priority[2],
+        priority: Number.parseInt(priority[0])
     });
 };
 
